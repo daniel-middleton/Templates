@@ -2,9 +2,9 @@
 
 ###############################################################################
 # Name: Replace
+# Author:   Daniel Middleton <daniel-middleton.com>
 # Description: Replace
 # Usage: Replace
-# Author:   Daniel Middleton <daniel-middleton.com>
 ###############################################################################
 
 # Global vars
@@ -42,7 +42,7 @@ checkStatus() {
     esac
 }
 
-# New method
+# New functions
 newMethod() {
     screenOut "Inside new method!"
     echo "New Method!"
@@ -55,5 +55,6 @@ echo && screenOut "$PROG_NAME script started..."
 # Execute methods
 newMethod
 
+#End
 screenOut "$PROG_NAME script ended." && echo
 exit 0
