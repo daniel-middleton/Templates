@@ -8,7 +8,7 @@
 ###############################################################################
 
 # Global vars
-PROG_NAME='Replace'
+PROG_NAME='<REPLACE_NAME>'
 
 # Usage: screenOut STATUS message
 screenOut() {
@@ -22,7 +22,7 @@ screenOut() {
         message="$2"
     fi
 
-    echo -e "[$PROG_NAME][$status][$timestamp]: $message"
+    echo -e "[$PROG_NAME][$timestamp][$status]: $message"
 }
 
 # Usage: checkStatus $? "Error message" "Success message"
@@ -36,13 +36,13 @@ checkStatus() {
             exit 1
             ;;
         *)
-            screenOut "ERROR" "Error in checkStatus function. Exiting..."
+            screenOut "ERROR" "Unhandled return code. Exiting..."
             exit 1
             ;;
     esac
 }
 
-# New functions
+# Usage: 
 newMethod() {
     screenOut "Inside new method!"
     echo "New Method!"
