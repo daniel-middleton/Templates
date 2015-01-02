@@ -16,7 +16,7 @@ import (
 )
 
 // Global variables
-var progName string = "Replace"
+var progName string = "<REPLACE_NAME>"
 
 // Usage: screenOut("STATUS", "message")
 func screenOut(status string, message string) {
@@ -51,14 +51,14 @@ func newFunc() {
 // Usage: Auto-runs on program execution
 func init() {
 	// Define and parse command line flags
-	wordPtr := flag.String("word", "foo", "a string")
-	numbPtr := flag.Int("numb", 42, "an int")
-	boolPtr := flag.Bool("fork", false, "a bool")
-	flag.Parse()
+	//wordPtr := flag.String("word", "foo", "a string")
+	//numbPtr := flag.Int("numb", 42, "an int")
+	//boolPtr := flag.Bool("fork", false, "a bool")
+	//flag.Parse()
 
-	fmt.Println("word:", *wordPtr)
-	fmt.Println("numb:", *numbPtr)
-	fmt.Println("fork:", *boolPtr)
+	//fmt.Println("word:", *wordPtr)
+	//fmt.Println("numb:", *numbPtr)
+	//fmt.Println("fork:", *boolPtr)
 }
 
 // Usage: Auto-runs after init
