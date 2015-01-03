@@ -3,6 +3,7 @@ Name:		dazy.go
 Author:		Daniel Middleton <me@daniel-middleton.com>
 Description:	DAn's laZY general helper functions
 Usage:		See godoc
+Notes: 		Assumes progName string is defined elsewhere
 */
 package main
 
@@ -11,11 +12,6 @@ import (
 	"fmt"
 	"os"
 	"time"
-)
-
-// Define global variables
-var (
-	progName string = "<REPLACE_NAME>"
 )
 
 // Desc: Prints a given message to screen in a uniform format

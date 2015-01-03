@@ -3,6 +3,7 @@ Name:		<REPLACE_NAME>
 Author:		Daniel Middleton <me@daniel-middleton.com>
 Description:	<REPLACE_DESC>
 Usage:		See ./<REPLACE_NAME> -h or --help
+Notes: 		Assumes ./dazy.go exists for helper functions
 */
 package main
 
@@ -10,6 +11,11 @@ package main
 import (
 	"fmt"
 	"os"
+)
+
+// Define global variables
+var (
+	progName string = "<REPLACE_NAME>" // Required by ./dazy.go
 )
 
 // Desc:
