@@ -1,29 +1,31 @@
-///////////////////////////////////////////////////////////////////////////////
-// Name:	<REPLACE_NAME>
-// Author:	Daniel Middleton <me@daniel-middleton.com>
-// Description:	<REPLACE_DESC>
-// Usage:	See ./<REPLACE_NAME> -h or --help
-///////////////////////////////////////////////////////////////////////////////
-
+/*
+Name:		<REPLACE_NAME>
+Author:		Daniel Middleton <me@daniel-middleton.com>
+Description:	<REPLACE_DESC>
+Usage:		See ./<REPLACE_NAME> -h or --help
+*/
 package main
 
-// Package dependancies
+// Import package dependancies
 import (
-	"flag"
 	"fmt"
 	"os"
 	"time"
 )
 
-// Global variables
-var progName string = "<REPLACE_NAME>"
+// Define global variables
+var (
+	progName string = "<REPLACE_NAME>"
+)
 
+// Desc: Prints a given message to screen in a uniform format
 // Usage: screenOut("STATUS", "message")
 func screenOut(status string, message string) {
 	timestamp := time.Now().Format("20060102T150405")
 	fmt.Printf("[%v][%v][%v]: %v \n", progName, timestamp, status, message)
 }
 
+// Desc: Generically handles potential errors
 // Usage: checkStatus(err, "Error message", "Success message")
 func checkStatus(err error, errorMsg string, successMsg string) {
 	if err == nil {
@@ -36,6 +38,7 @@ func checkStatus(err error, errorMsg string, successMsg string) {
 	}
 }
 
+// Desc:
 // Usage:
 func newFunc() {
 	screenOut("INFO", "Started newFunc...")
@@ -48,7 +51,8 @@ func newFunc() {
 	screenOut("INFO", "Finished newFunc.")
 }
 
-// Usage: Auto-runs on program execution
+// Desc: Auto-runs on program execution
+// Usage: n/a
 func init() {
 	// Define and parse command line flags
 	//wordPtr := flag.String("word", "foo", "a string")
@@ -61,7 +65,8 @@ func init() {
 	//fmt.Println("fork:", *boolPtr)
 }
 
-// Usage: Auto-runs after init
+// Desc: Auto-runs after init function
+// Usage: n/a
 func main() {
 	fmt.Println()
 	screenOut("INFO", progName+" script started...")
