@@ -2,7 +2,7 @@
 Name:		dazy.go
 Author:		Daniel Middleton <me@daniel-middleton.com>
 Description:	DAn's laZY general helper functions
-Usage:		See godoc
+Usage:		See function comments
 Notes: 		Assumes progName string is defined elsewhere
 */
 package main
