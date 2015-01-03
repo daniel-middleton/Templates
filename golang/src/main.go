@@ -34,15 +34,7 @@ func newFunc() {
 // Desc: Auto-runs on program execution
 // Usage: n/a
 func init() {
-	// Define and parse command line flags
-	//wordPtr := flag.String("word", "foo", "a string")
-	//numbPtr := flag.Int("numb", 42, "an int")
-	//boolPtr := flag.Bool("fork", false, "a bool")
-	//flag.Parse()
 
-	//fmt.Println("word:", *wordPtr)
-	//fmt.Println("numb:", *numbPtr)
-	//fmt.Println("fork:", *boolPtr)
 }
 
 // Desc: Auto-runs after init function
