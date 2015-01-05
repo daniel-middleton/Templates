@@ -18,13 +18,13 @@ var ()
 func logOut(status string, message string) {
 	switch status {
 	case "INFO":
-		log.Println(status, message)
+		log.Println(progName, status, message)
 	case "SUCCESS":
-		log.Println(status, message)
+		log.Println(progName, status, message)
 	case "ERROR":
-		log.Panicln(status, message)
+		log.Panicln(progName, status, message)
 	default:
-		log.Panicln("Unhandled logging status (%s). Exiting...", status)
+		log.Panicln(progName, "Unhandled logging status (%s). Exiting...", status)
 	}
 }
 

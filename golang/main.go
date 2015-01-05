@@ -41,11 +41,11 @@ func init() {
 // Usage: n/a
 func main() {
 	fmt.Println()
-	logOut("INFO", progName+" script started...")
+	logOut("INFO", "Script started...")
 
 	// Execute functions
 
-	logOut("INFO", progName+" script ended.")
+	logOut("INFO", "Script ended.")
 	fmt.Println()
 	os.Exit(0)
 }
