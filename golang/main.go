@@ -3,7 +3,7 @@ Name:		<REPLACE_NAME>
 Author:		Daniel Middleton <me@daniel-middleton.com>
 Description:	<REPLACE_DESC>
 Usage:		See ./<REPLACE_NAME> -h or --help
-Notes: 		Assumes ./dazy.go exists for helper functions
+Notes: 		Assumes dazy.go exists in package for helper functions
 */
 package main
 
@@ -14,21 +14,21 @@ import (
 )
 
 // Define global variables
-var (
-	progName string = "<REPLACE_NAME>" // Required by ./dazy.go
+const (
+	progName string = "<REPLACE_NAME>" // Required by dazy.go
 )
 
 // Desc:
 // Usage:
 func newFunc() {
-	screenOut("INFO", "Started newFunc...")
+	logOut("INFO", "Started newFunc...")
 
 	// Do stuff
 	//	checkStatus(err,
 	//		"Error message.",
 	//		"Success message.")
 
-	screenOut("INFO", "Finished newFunc.")
+	logOut("INFO", "Finished newFunc.")
 }
 
 // Desc: Auto-runs on program execution
@@ -41,11 +41,11 @@ func init() {
 // Usage: n/a
 func main() {
 	fmt.Println()
-	screenOut("INFO", progName+" script started...")
+	logOut("INFO", progName+" script started...")
 
 	// Execute functions
 
-	screenOut("INFO", progName+" script ended.")
+	logOut("INFO", progName+" script ended.")
 	fmt.Println()
 	os.Exit(0)
 }

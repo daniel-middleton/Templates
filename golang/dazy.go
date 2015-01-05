@@ -8,28 +8,32 @@ Notes: 		Assumes progName string is defined elsewhere
 package main
 
 // Import package dependancies
-import (
-	"fmt"
-	"os"
-	"time"
-)
+import "log"
 
-// Desc: Prints a given message to screen in a uniform format
-// Usage: screenOut("STATUS", "message")
-func screenOut(status string, message string) {
-	timestamp := time.Now().Format("20060102T150405")
-	fmt.Printf("[%v][%v][%v]: %v \n", progName, timestamp, status, message)
+// Define global variables
+var ()
+
+// Desc: Prints a given message to screen and log in a uniform format
+// Usage: logOut("STATUS", "message")
+func logOut(status string, message string) {
+	switch status {
+	case "INFO":
+		log.Println(status, message)
+	case "SUCCESS":
+		log.Println(status, message)
+	case "ERROR":
+		log.Panicln(status, message)
+	default:
+		log.Panicln("Unhandled logging status (%s). Exiting...", status)
+	}
 }
 
-// Desc: Generically handles potential errors
+// Desc: Generically handles errors
 // Usage: checkStatus(err, "Error message", "Success message")
 func checkStatus(err error, errorMsg string, successMsg string) {
 	if err == nil {
-		screenOut("SUCCESS", successMsg)
+		logOut("SUCCESS", successMsg)
 	} else {
-		screenOut("ERROR", errorMsg+" - Exiting...")
-		screenOut("ERROR", "Error report:")
-		fmt.Println("\n", err, "\n")
-		os.Exit(1)
+		logOut("ERROR", errorMsg+" - Exiting...")
 	}
 }
