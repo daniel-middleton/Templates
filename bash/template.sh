@@ -23,7 +23,7 @@ screenOut() {
     fi
 
     echo -e "[$PROG_NAME][$timestamp][$status]: $message"
-    logger -t $PROG_NAME "[$status]: $message"
+    logger -t $PROG_NAME "[$status] $message"
 }
 
 # Usage: checkStatus $? "Error message" "Success message"
