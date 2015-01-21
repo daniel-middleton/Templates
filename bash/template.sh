@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ###############################################################################
-# Name: Replace
-# Author:   Daniel Middleton <daniel-middleton.com>
-# Description: Replace
-# Usage: Replace
+# Name:         Replace
+# Author:       Daniel Middleton <daniel-middleton.com>
+# Description:  Replace
+# Usage:        Replace
 ###############################################################################
 
 # Global vars
-PROG_NAME='<REPLACE_NAME>'
+PROG_NAME="$(basename $0)"
 
 # Usage: screenOut STATUS message
 screenOut() {
@@ -23,6 +23,7 @@ screenOut() {
     fi
 
     echo -e "[$PROG_NAME][$timestamp][$status]: $message"
+    logger -t $PROG_NAME "[$status]: $message"
 }
 
 # Usage: checkStatus $? "Error message" "Success message"
@@ -51,6 +52,7 @@ newMethod() {
 }
 
 echo && screenOut "$PROG_NAME script started..."
+screenOut "Logging to syslog and stdout."
 
 # Execute methods
 newMethod
